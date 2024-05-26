@@ -1,0 +1,10 @@
+<ng-template [ngIf]="errors">
+
+  <span *ngIf="errors.notIsNumber">
+    Wrong format, numbers only
+  </span>
+
+  <span *ngIf="errors?.required">
+    Can't be blank
+  </span>
+</ng-template>

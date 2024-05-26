@@ -1,0 +1,139 @@
+@import '../../../config-scss/rem-calc.scss';
+:host {
+  position: relative;
+  margin-top: rem-calc(30);
+  display: flex;
+
+  height: rem-calc(240);
+  .frontCard {
+    position: absolute;
+    z-index: 1000;
+
+    bottom: rem-calc(000);
+    background: url('../../../assets/img/bg-card-front.png') no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: rem-calc(20);
+
+    width: rem-calc(250);
+    height: rem-calc(110);
+
+    border-radius: rem-calc(10);
+    img {
+      width: rem-calc(50);
+    }
+
+    .dataCard {
+      color: var(--white);
+
+      h3 {
+        width: 100%;
+        text-align: justify;
+        font-size: rem-calc(22);
+        font-weight: 500;
+
+        margin-bottom: rem-calc(16);
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+
+        h5, span {
+          font-family: var(--fontFamily);
+          font-size: rem-calc(12);
+        }
+      }
+    }
+  }
+
+  .backCard {
+    position: absolute;
+    right: 0;
+
+    background: url('../../../assets/img/bg-card-back.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: rem-calc(250);
+    height: rem-calc(110);
+
+    border-radius: rem-calc(10);
+
+    padding: rem-calc(20);
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    span {
+      margin-right: rem-calc(20);
+
+      color: var(--white);
+      font-family: var(--fontFamily);
+      font-size: rem-calc(10);
+    }
+  }
+  
+  @media (min-width:1440px) {
+    flex-direction: column;
+
+    margin: 0;
+    width: rem-calc(550);
+    height: 60vh;
+
+    .frontCard {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+
+      width: rem-calc(400);
+      height: rem-calc(190);
+
+      padding: rem-calc(30);
+
+      img {
+        width: rem-calc(80);
+      }
+
+      .dataCard {
+        h3 {
+          font-size: rem-calc(30);
+          letter-spacing: rem-calc(3);
+
+          margin-bottom: rem-calc(30);
+        }
+
+        div {
+          h5,span {
+            font-size: rem-calc(16)
+          }
+          span {
+            margin-right: rem-calc(4);
+          }
+        }
+      }
+    }
+
+    .backCard {
+      position: absolute;
+      z-index: 0;
+      right: 0;
+      bottom: 0;
+
+      width: rem-calc(400);
+      height: rem-calc(190);
+
+      padding: rem-calc(30);
+
+      span {
+        font-size: rem-calc(16);
+      }
+    }
+  }
+}
+

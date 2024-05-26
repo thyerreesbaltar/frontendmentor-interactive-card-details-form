@@ -1,0 +1,26 @@
+@import './rem-calc.scss';
+.input {
+  padding: rem-calc(10) rem-calc(15);
+
+  border: rem-calc(1.5) solid var(--lightGrayishViolet);
+  border-radius: rem-calc(8);
+
+  color: var(--veryDarkViolet);
+  font-family: var(--fontFamily);
+  font-size: rem-calc(18);
+
+  cursor: pointer;
+  
+  &::placeholder {
+    color: var(--lightGrayishViolet);
+    font-family: var(--fontFamily);
+    font-weight: 500;
+  }
+  &:focus {
+    border-color: var(--linearGradiant);
+  }
+
+  &__invalid{
+    border-color: var(--red);
+  }
+}

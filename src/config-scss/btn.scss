@@ -1,0 +1,19 @@
+@import './rem-calc.scss';
+.button {
+
+  width: 100%;
+  height: rem-calc(60);
+
+  border-radius: rem-calc(10);
+
+  background-color: var(--veryDarkViolet);
+  color: var(--white);
+  font-family: var(--fontFamily);
+  font-size: rem-calc(20);
+
+  cursor: pointer;
+
+  @media screen  and (min-width: 424px) and (max-width: 767px) {
+    width: 100%;
+  }
+}

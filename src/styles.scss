@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@use './config-scss/reset.scss';
+@use './config-scss/variables.scss';
+@use './config-scss/input.scss';
+@use './config-scss/btn.scss';
+@import './config-scss/rem-calc.scss';
+
+html {
+  font-family: var(--fontFamily);
+
+  background: url('assets/img/bg-main-mobile.png') no-repeat;
+}
+
+main {
+  width: rem-calc(330);
+  margin: 0 auto;
+}
+
+@media screen  and (min-width: 376px) and (max-width: 1439px) {
+  html {
+    background-size: 100% 30%;
+  }
+}
+
+@media screen  and (min-width: 424px) and (max-width: 767px) {
+  html {
+    background-size: 130% 30%;
+  }
+
+  main {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1439px) {
+  html {
+    background: url('assets/img/bg-main-desktop.png') no-repeat;
+  }
+
+  main {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
