@@ -7,6 +7,8 @@
 
 html {
   font-family: var(--fontFamily);
+  height: 100vh;
+  background-size: contain;
 
   background: url('assets/img/bg-main-mobile.png') no-repeat;
 }
@@ -34,8 +36,9 @@ main {
 @media screen and (min-width: 1439px) {
   html {
     background: url('assets/img/bg-main-desktop.png') no-repeat;
-  }
+    background-size: contain;
 
+  }
   main {
     width: 80vw;
     height: 100vh;
